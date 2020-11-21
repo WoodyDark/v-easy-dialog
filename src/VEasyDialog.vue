@@ -280,6 +280,7 @@ export default {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+    touch-action: none;
 }
 
 .v-easy-dialog--backdrop-btn {
@@ -310,6 +311,7 @@ export default {
     display: flex;
     overflow-y: auto;
     position: absolute;
+    touch-action: none;
 }
 
 .v-easy-dialog--content-container:focus {

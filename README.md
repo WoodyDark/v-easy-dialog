@@ -195,3 +195,5 @@ These examples use TailwindCSS to illustrate how you might want add your own sty
 1. All dialogs are automatically appended to the body tag via the portal-vue package.
 
 2. The default slot exposes a deactivate slot prop. This is a function that will `$emit('input', false)` from within the dialog component and to work with the v-model binding. The difference between using this and using your own `@click="dialogState = close"` is that deactivate will respect the persistent prop. Please check the **Persisent Dialog** example for more information.
+
+3. There is an issue in iOS where `body { overflow: hidden }` is not respected, causing the background to be scrollable even when a dialog is open. This is a [long-running issue that affects even major UI Component Frameworks such as Vuetify](https://github.com/vuetifyjs/vuetify/issues/3875). Our workaround for this is by implementing `touch-action: none;` in the dialog and dialog content. This may cause accessibility issue for some users, although we're not sure how widespread it will be. If you encounter any issues caused by this, please feel free to open an issue.
