@@ -13,5 +13,8 @@
         "component"
     ],
     "author": "WoodyDark",
-    "license": "ISC"
+    "license": "ISC",
+    "dependencies": {
+        "portal-vue": "^2.1.7"
+    }
 }
