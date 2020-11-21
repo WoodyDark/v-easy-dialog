@@ -35,7 +35,7 @@
                     }"
                     class="v-easy-dialog--content-container"
                     :style="{
-                        width,
+                        width: fullscreen ? '100%' : width,
                         maxHeight: fullscreen ? '100%' : maxHeight,
                         'max-width': !fullscreen && '90%'
                     }"
