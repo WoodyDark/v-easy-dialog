@@ -16,5 +16,9 @@
     "license": "MIT",
     "dependencies": {
         "portal-vue": "^2.1.7"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/WoodyDark/v-easy-dialog.git"
     }
 }
