@@ -34,7 +34,9 @@ Import as component
 import VEasyDialog form 'v-easy-dialog'
 
 export default {
-    components: VEasyDialog
+    components: {
+        VEasyDialog
+    }
 }
 ```
 
