@@ -239,14 +239,14 @@ export default {
 <style scoped>
 .v-easy-dialog--transition-ease-in {
     transform: scale(1);
-    transition: opacity cubic-bezier(0.4, 0, 1, 1) 0.15,
-        transform cubic-bezier(0.4, 0, 1, 1) 0.15;
+    transition: opacity cubic-bezier(0.4, 0, 1, 1) 0.15s,
+        transform cubic-bezier(0.4, 0, 1, 1) 0.15s;
 }
 
 .v-easy-dialog--transition-ease-out {
     transform: scale(1);
-    transition: opacity cubic-bezier(0, 0, 0.2, 1) 0.15,
-        transform cubic-bezier(0, 0, 0.2, 1) 0.15;
+    transition: opacity cubic-bezier(0, 0, 0.2, 1) 0.15s,
+        transform cubic-bezier(0, 0, 0.2, 1) 0.15s;
 }
 
 .v-easy-dialog--content-transition-opened {
