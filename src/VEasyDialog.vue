@@ -170,6 +170,8 @@ export default {
             )
             document.body.style.overflow =
                 newOpenedDialogs.length > 0 ? 'hidden' : ''
+            document.documentElement.style.overflow =
+                newOpenedDialogs.length > 0 ? 'hidden' : ''
         },
         openedDialogs() {
             return JSON.parse(document.body.dataset.openedDialogs)
