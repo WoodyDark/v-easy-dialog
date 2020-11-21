@@ -1,6 +1,6 @@
 {
     "name": "v-easy-dialog",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Simple dialog/modal component for Vue 2",
     "main": "index.js",
     "scripts": {
@@ -13,7 +13,7 @@
         "component"
     ],
     "author": "WoodyDark",
-    "license": "ISC",
+    "license": "MIT",
     "dependencies": {
         "portal-vue": "^2.1.7"
     }
