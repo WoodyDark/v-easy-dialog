@@ -31,7 +31,7 @@ or
 Import as component
 
 ```javascript
-import VEasyDialog form 'v-easy-dialog'
+import VEasyDialog from 'v-easy-dialog'
 
 export default {
     components: {
