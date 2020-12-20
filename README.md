@@ -16,6 +16,7 @@ https://r2xwr.csb.app/
 -   Smooth transition
 -   Optional `persistent` prop for when you require user's input to proceed
 -   Optional `fullscreen` mode.
+-   Optional `mountingTarget` prop, defaults to `body`.
 -   Can automatically focus on desired element when launched.
 
 ## Installation

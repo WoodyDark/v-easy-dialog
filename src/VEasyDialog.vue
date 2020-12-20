@@ -1,5 +1,5 @@
 <template>
-    <mounting-portal mount-to="body" append v-if="mountDom">
+    <mounting-portal :mount-to="mountingTarget" append v-if="mountDom">
         <transition
             enter-active-class="v-easy-dialog--transition-ease-in"
             enter-class="v-easy-dialog--opacity-0"
@@ -72,7 +72,8 @@ export default {
         persistent: { type: Boolean, default: false },
         backdropClass: { type: undefined },
         backdropStyle: { type: undefined },
-        focusOn: { type: String, default: undefined }
+        focusOn: { type: String, default: undefined },
+        mountingTarget: { type: String, default: 'body' }
     },
     components: {
         MountingPortal
