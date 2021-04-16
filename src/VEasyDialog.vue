@@ -1,5 +1,5 @@
 <template>
-    <mounting-portal :mount-to="mountingTarget" append v-if="mountDom">
+    <mounting-portal mount-to="body" append v-if="mountDom">
         <transition
             enter-active-class="v-easy-dialog--transition-ease-in"
             enter-class="v-easy-dialog--opacity-0"
@@ -21,6 +21,7 @@
                     :is="backgroundBtnTag"
                     @click="attemptClose"
                     class="v-easy-dialog--backdrop-btn"
+                    :class="backgroundBtnClass"
                 ></component>
 
                 <div
@@ -31,7 +32,8 @@
                     :class="{
                         'v-easy-dialog--content-grow': growContent,
                         'v-easy-dialog--persist': showPersistence,
-                        'v-easy-dialog--fullscreen': fullscreen
+                        'v-easy-dialog--fullscreen': fullscreen,
+                        dialogContentClass
                     }"
                     class="v-easy-dialog--content-container"
                     :style="{
@@ -70,10 +72,11 @@ export default {
         fullscreen: { type: Boolean, default: false },
         backgroundBtnTag: { type: String, default: 'button' },
         persistent: { type: Boolean, default: false },
+        backgroundBtnClass: { type: undefined },
+        dialogContentClass: { type: undefined },
         backdropClass: { type: undefined },
         backdropStyle: { type: undefined },
-        focusOn: { type: String, default: undefined },
-        mountingTarget: { type: String, default: 'body' }
+        focusOn: { type: String, default: undefined }
     },
     components: {
         MountingPortal
@@ -281,7 +284,6 @@ export default {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    touch-action: none;
 }
 
 .v-easy-dialog--backdrop-btn {
@@ -312,7 +314,6 @@ export default {
     display: flex;
     overflow-y: auto;
     position: absolute;
-    touch-action: none;
 }
 
 .v-easy-dialog--content-container:focus {
